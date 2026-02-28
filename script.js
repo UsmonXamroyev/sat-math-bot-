@@ -5,10 +5,13 @@ const qCount = 22;
 const box = document.getElementById("questions");
 
 for (let i = 1; i <= qCount; i++) {
-  box.innerHTML += `
+  const div = document.createElement("div");
+  div.innerHTML = `
     <p>${i}-savol</p>
-    <input id="q${i}" /><br><br>
+    <input id="q${i}" placeholder="Javobni kiriting">
+    <hr>
   `;
+  box.appendChild(div);
 }
 
 function submit() {
